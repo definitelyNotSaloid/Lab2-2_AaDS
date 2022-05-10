@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Lab22_AaDS</RootNamespace>
+    <StartupObject>Lab22_AaDS.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="libs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Lab1_AaDS">
+      <HintPath>libs\Lab1_AaDS.dll</HintPath>
+    </Reference>
+    <Reference Include="Lab21_AaDS">
+      <HintPath>libs\Lab21_AaDS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
